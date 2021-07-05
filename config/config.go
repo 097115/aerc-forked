@@ -48,6 +48,7 @@ type UIConfig struct {
 	StyleSetDirs        []string      `ini:"stylesets-dirs" delim:":"`
 	StyleSetName        string        `ini:"styleset-name"`
 	style               StyleSet
+	FuzzyFolderComplete bool          `ini:"fuzzy-folder-complete"`
 }
 
 type ContextType int
@@ -526,6 +527,7 @@ func LoadConfigFromFile(root *string, sharedir string) (*AercConfig, error) {
 			CompletionPopovers:  true,
 			StyleSetDirs:        []string{path.Join(sharedir, "stylesets")},
 			StyleSetName:        "default",
+			FuzzyFolderComplete: false,
 		},
 
 		ContextualUis: []UIConfigContext{},

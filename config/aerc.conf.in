@@ -78,6 +78,10 @@ stylesets-dirs=@SHAREDIR@/stylesets/
 # Default: default
 styleset-name=default
 
+# Activates fuzzy search for IMAP folders: the typed string is search in the
+#   folder tree in any position, not necessarily at the beginning.
+fuzzy-folder-complete=false
+
 [viewer]
 #
 # Specifies the pager to use when displaying emails. Note that some filters
