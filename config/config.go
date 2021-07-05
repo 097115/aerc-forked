@@ -113,6 +113,7 @@ type ComposeConfig struct {
 	Editor         string     `ini:"editor"`
 	HeaderLayout   [][]string `ini:"-"`
 	AddressBookCmd string     `ini:"address-book-cmd"`
+	ReplyToSelf    bool       `ini:"reply-to-self"`
 }
 
 type FilterConfig struct {
@@ -549,6 +550,7 @@ func LoadConfigFromFile(root *string, sharedir string) (*AercConfig, error) {
 				{"To", "From"},
 				{"Subject"},
 			},
+			ReplyToSelf:  true,
 		},
 
 		Templates: TemplateConfig{
