@@ -218,6 +218,11 @@ func (dirlist *DirectoryList) Draw(ctx *ui.Context) {
 		needScrollbar = false
 	}
 
+	if dirlist.UiConfig().NoScrollbarDirList {
+		needScrollbar = false
+		percentVisible = 1.0
+	}
+
 	textWidth := ctx.Width()
 	if needScrollbar {
 		textWidth -= 1

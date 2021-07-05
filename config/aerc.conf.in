@@ -79,8 +79,18 @@ stylesets-dirs=@SHAREDIR@/stylesets/
 styleset-name=default
 
 # Activates fuzzy search for IMAP folders: the typed string is search in the
-#   folder tree in any position, not necessarily at the beginning.
+# folder tree in any position, not necessarily at the beginning.
 fuzzy-folder-complete=false
+
+# Disable the scrollbar in the messages list
+#
+# Default: false
+no-scrollbar-msglist=false
+
+# Disable the scrollbar in the directories list
+#
+# Default: false
+no-scrollbar-dirlist=false
 
 [viewer]
 #

@@ -73,6 +73,11 @@ func (ml *MessageList) Draw(ctx *ui.Context) {
 		needScrollbar = false
 	}
 
+	if ml.aerc.SelectedAccount().UiConfig().NoScrollbarMsgList {
+		needScrollbar = false
+		percentVisible = 1.0
+	}
+
 	textWidth := ctx.Width()
 	if needScrollbar {
 		textWidth -= 1

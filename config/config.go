@@ -49,6 +49,8 @@ type UIConfig struct {
 	StyleSetName        string        `ini:"styleset-name"`
 	style               StyleSet
 	FuzzyFolderComplete bool          `ini:"fuzzy-folder-complete"`
+	NoScrollbarMsgList  bool          `ini:"no-scrollbar-msglist"`
+	NoScrollbarDirList  bool          `ini:"no-scrollbar-dirlist"`
 }
 
 type ContextType int
@@ -529,6 +531,8 @@ func LoadConfigFromFile(root *string, sharedir string) (*AercConfig, error) {
 			StyleSetDirs:        []string{path.Join(sharedir, "stylesets")},
 			StyleSetName:        "default",
 			FuzzyFolderComplete: false,
+			NoScrollbarMsgList:  false,
+			NoScrollbarDirList:  false,
 		},
 
 		ContextualUis: []UIConfigContext{},

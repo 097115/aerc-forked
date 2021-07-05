@@ -194,6 +194,16 @@ These options are configured in the *[ui]* section of aerc.conf.
 	but it will show coincidences of folders /containing/ the string in any
 	position of their name. This is case-independent.
 
+*no-scrollbar-msglist*
+	Disable showing the scrollbar in the messages list
+
+	Default: false
+
+*no-scrollbar-dirlist*
+	Disable showing the scrollbar in the directories list
+
+	Default: false
+
 ## Contextual UI Configuration
 
 The UI configuration can be specialized for accounts, specific mail
