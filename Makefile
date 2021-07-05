@@ -2,13 +2,7 @@
 .SUFFIXES:
 .SUFFIXES: .1 .5 .7 .1.scd .5.scd .7.scd
 
-override undefine VERSION # don't allow local overrides, we want our version
-_git_version=$(shell git describe --long --tags --dirty 2>/dev/null | sed 's/-/.r/;s/-/./')
-ifeq ($(strip $(_git_version)),)
-VERSION=0.5.2
-else
-VERSION=$(_git_version)
-endif
+VERSION=0.5.2-forked
 
 VPATH=doc
 PREFIX?=/usr/local
